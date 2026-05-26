@@ -12,7 +12,282 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/style.css">
+<style>
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* GENERAL */
+
+body{
+    background:#111111;
+    color:#F5F5F5;
+    font-family:'Poppins',sans-serif;
+}
+
+/* HEADER */
+
+header{
+    width:100%;
+    padding:20px 8%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:rgba(0,0,0,0.75);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+/* NAV */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:32px;
+    font-family:'Cinzel',serif;
+    color:#D4A017;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#FF6B00;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    color:#FF6B00;
+}
+
+/* SECCION */
+
+section{
+    padding:140px 8% 100px;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.title h2{
+    font-size:55px;
+    color:#D4A017;
+    font-family:'Cinzel',serif;
+}
+
+.title p{
+    color:#bbb;
+    margin-top:15px;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* FORMULARIO */
+
+.contact{
+    background:#1b1b1b;
+    border-radius:25px;
+    padding:50px;
+    border:1px solid #222;
+}
+
+.contact h3{
+    font-size:38px;
+    color:#FF6B00;
+    margin-bottom:15px;
+    text-align:center;
+}
+
+.contact p{
+    color:#ccc;
+    text-align:center;
+    margin-bottom:35px;
+    line-height:1.7;
+}
+
+.reservation-form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    max-width:800px;
+    margin:auto;
+}
+
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea{
+
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:15px;
+    background:#222;
+    color:white;
+    font-size:16px;
+    outline:none;
+    border:1px solid #333;
+    transition:0.3s;
+}
+
+.reservation-form input:focus,
+.reservation-form select:focus,
+.reservation-form textarea:focus{
+
+    border:1px solid #FF6B00;
+    box-shadow:0 0 15px rgba(255,107,0,0.3);
+}
+
+.reservation-form textarea{
+    resize:none;
+    height:150px;
+}
+
+label{
+    color:#D4A017;
+    font-weight:600;
+    margin-bottom:-10px;
+}
+
+/* BOTON */
+
+.btn{
+    display:inline-block;
+    padding:16px 40px;
+    background:#FF6B00;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+    border:none;
+    cursor:pointer;
+    transition:0.3s;
+    margin-top:10px;
+}
+
+.btn:hover{
+    background:#D4A017;
+    transform:scale(1.03);
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
+}
+
+.card{
+    background:#1b1b1b;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+    border:1px solid #222;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(255,107,0,0.25);
+}
+
+.card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card-content h3{
+    color:#FF6B00;
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+.card-content p{
+    color:#ccc;
+    line-height:1.8;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#0c0c0c;
+    color:#888;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+header{
+    padding:15px 5%;
+}
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav ul{
+    flex-direction:column;
+    text-align:center;
+    gap:15px;
+}
+
+.logo{
+    font-size:28px;
+}
+
+section{
+    padding:180px 5% 80px;
+}
+
+.title h2{
+    font-size:40px;
+}
+
+.contact{
+    padding:30px;
+}
+
+.cards{
+    grid-template-columns:1fr;
+}
+
+.card img{
+    height:220px;
+}
+
+}
+
+</style>
 
 </head>
 
@@ -48,14 +323,14 @@ MAR <span>Y FUEGO</span>
 
 <!-- RESERVAS -->
 
-<section class="reservation-page">
+<section>
 
 <div class="title">
 
 <h2>Reserva Tu Mesa</h2>
 
 <p>
-Disfruta una experiencia gastronómica premium en Mar y Fuego.
+Queremos que cada visita a Mar y Fuego se convierta en un momento especial. Reserva tu mesa fácilmente y disfruta una experiencia llena de sabor, comodidad y un ambiente pensado para compartir.
 </p>
 
 </div>
@@ -65,12 +340,10 @@ Disfruta una experiencia gastronómica premium en Mar y Fuego.
 <h3>Formulario de Reservación</h3>
 
 <p>
-Completa tus datos para reservar tu mesa de forma elegante y rápida.
+Completa tus datos para organizar tu visita de la mejor manera posible.
 </p>
 
 <form class="reservation-form">
-
-<!-- DATOS PERSONALES -->
 
 <input type="text" placeholder="Nombre Completo" required>
 
@@ -78,15 +351,11 @@ Completa tus datos para reservar tu mesa de forma elegante y rápida.
 
 <input type="tel" placeholder="Número de Teléfono" required>
 
-<!-- FECHA Y HORA -->
-
 <label>Fecha de Reserva</label>
 <input type="date" required>
 
 <label>Hora de Reserva</label>
 <input type="time" required>
-
-<!-- PERSONAS -->
 
 <select required>
 
@@ -103,20 +372,16 @@ Completa tus datos para reservar tu mesa de forma elegante y rápida.
 
 </select>
 
-<!-- TIPO DE MESA -->
-
 <select required>
 
-<option value="">Tipo de Mesa</option>
+<option value="">Área Preferida</option>
 
 <option>Interior</option>
 <option>Exterior</option>
-<option>VIP Premium</option>
-<option>Vista Especial</option>
+<option>Área Familiar</option>
+<option>Zona Privada</option>
 
 </select>
-
-<!-- OCASION -->
 
 <select>
 
@@ -126,15 +391,11 @@ Completa tus datos para reservar tu mesa de forma elegante y rápida.
 <option>Cumpleaños</option>
 <option>Aniversario</option>
 <option>Reunión Familiar</option>
-<option>Evento Empresarial</option>
+<option>Celebración Especial</option>
 
 </select>
 
-<!-- COMENTARIOS -->
-
-<textarea placeholder="Comentarios especiales, decoración, alergias o solicitudes adicionales"></textarea>
-
-<!-- BOTON -->
+<textarea placeholder="Comentarios adicionales, alergias o solicitudes especiales"></textarea>
 
 <button type="submit" class="btn">
 
@@ -156,10 +417,10 @@ Confirmar Reserva
 
 <div class="card-content">
 
-<h3>Ambiente Elegante</h3>
+<h3>Ambiente Acogedor</h3>
 
 <p>
-Disfruta un espacio moderno, cálido y premium diseñado para momentos especiales.
+Cada espacio está diseñado para brindar comodidad, tranquilidad y momentos especiales junto a las personas que más quieres.
 </p>
 
 </div>
@@ -172,10 +433,10 @@ Disfruta un espacio moderno, cálido y premium diseñado para momentos especiale
 
 <div class="card-content">
 
-<h3>Atención Exclusiva</h3>
+<h3>Atención Cercana</h3>
 
 <p>
-Nuestro equipo está preparado para brindarte una experiencia personalizada y de alta calidad.
+Nuestro equipo trabaja para que cada visita sea agradable, ofreciendo atención amable y cuidando cada detalle de tu experiencia.
 </p>
 
 </div>
@@ -188,10 +449,10 @@ Nuestro equipo está preparado para brindarte una experiencia personalizada y de
 
 <div class="card-content">
 
-<h3>Experiencia Premium</h3>
+<h3>Momentos Especiales</h3>
 
 <p>
-Cada reservación está pensada para que disfrutes sabores únicos y momentos inolvidables.
+Ya sea una reunión, una celebración o una cena tranquila, queremos que cada reservación se convierta en un recuerdo inolvidable.
 </p>
 
 </div>
