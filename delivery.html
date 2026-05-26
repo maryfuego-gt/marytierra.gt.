@@ -268,35 +268,97 @@ align-items:flex-start;
 }
 
 }
+/* HEADER */
 
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:15px 6%;
+background:rgba(0,0,0,0.75);
+backdrop-filter:blur(10px);
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:relative;
+}
+
+.logo{
+font-size:30px;
+font-family:'Cinzel',serif;
+font-weight:bold;
+color:#D4A017;
+}
+
+.logo span{
+color:#FF6B00;
+}
+
+#nav-links{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+#nav-links li a{
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+#nav-links li a:hover{
+color:#FF6B00;
+}
+
+/* BOTON MENU */
+
+.menu-toggle{
+display:none;
+font-size:34px;
+cursor:pointer;
+color:white;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.menu-toggle{
+display:block;
+}
+
+#nav-links{
+position:absolute;
+top:80px;
+right:0;
+width:100%;
+background:#151515;
+flex-direction:column;
+align-items:center;
+padding:30px 0;
+gap:25px;
+display:none;
+border-radius:0 0 20px 20px;
+}
+
+#nav-links.active{
+display:flex;
+}
+
+section{
+padding-top:180px;
+}
+
+}
 </style>
 
-</head>
 
-<body>
-
-<header>
-
-<nav>
-
-<div class="logo">
-MAR <span>Y FUEGO</span>
-</div>
-
-<ul>
-
-<li><a href="index.html">Inicio</a></li>
-<li><a href="nosotros.html">Nosotros</a></li>
-<li><a href="menu.html">Menú</a></li>
-<li><a href="reservas.html">Reservas</a></li>
-<li><a href="delivery.html">Delivery</a></li>
-<li><a href="contacto.html">Contacto</a></li>
-
-</ul>
-
-</nav>
-
-</header>
 
 <section>
 
@@ -473,7 +535,16 @@ renderCart();
 renderCart();
 
 </script>
+<script>
 
+function toggleMenu(){
+
+document.getElementById("nav-links")
+.classList.toggle("active");
+
+}
+
+</script>
 </body>
 
 </html>
