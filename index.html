@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mar y Fuego</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#111111;
+    color:#F5F5F5;
+    font-family:'Poppins',sans-serif;
+}
+
+/* MENU */
+
+header{
+    width:100%;
+    padding:20px 8%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:rgba(0,0,0,0.7);
+    backdrop-filter:blur(10px);
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:32px;
+    font-family:'Cinzel',serif;
+    color:#D4A017;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#FF6B00;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    color:#FF6B00;
+}
+
+/* HERO */
+
+.hero{
+    width:100%;
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
+    url('https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1600&auto=format&fit=crop');
+    
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:80px;
+    font-family:'Cinzel',serif;
+    color:#D4A017;
+    margin-bottom:20px;
+}
+
+.hero-content h1 span{
+    color:#FF6B00;
+}
+
+.hero-content p{
+    font-size:22px;
+    max-width:700px;
+    margin:auto;
+    margin-bottom:35px;
+    color:#ddd;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 40px;
+    background:#FF6B00;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#D4A017;
+    transform:scale(1.05);
+}
+
+/* SECCIONES */
+
+section{
+    padding:100px 8%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.title h2{
+    font-size:50px;
+    color:#D4A017;
+    font-family:'Cinzel',serif;
+}
+
+.title p{
+    color:#aaa;
+    margin-top:10px;
+}
+
+/* TARJETAS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#1c1c1c;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+    border:1px solid #222;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px rgba(255,107,0,0.3);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card-content h3{
+    color:#FF6B00;
+    margin-bottom:10px;
+    font-size:28px;
+}
+
+.card-content p{
+    color:#ccc;
+    line-height:1.6;
+}
+
+/* CONTACTO */
+
+.contact{
+    background:#181818;
+    border-radius:25px;
+    padding:50px;
+    text-align:center;
+}
+
+.contact h3{
+    font-size:40px;
+    color:#D4A017;
+    margin-bottom:20px;
+}
+
+.contact p{
+    margin-bottom:30px;
+    color:#ccc;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#0c0c0c;
+    color:#888;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero-content h1{
+    font-size:50px;
+}
+
+nav ul{
+    display:none;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">
+MAR <span>Y FUEGO</span>
+</div>
+
+<ul>
+<li><a href="#">Inicio</a></li>
+<li><a href="#">Nosotros</a></li>
+<li><a href="#">Menú</a></li>
+<li><a href="#">Reservas</a></li>
+<li><a href="#">Contacto</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>MAR <span>Y FUEGO</span></h1>
+
+<p>
+Parrilladas premium, ceviches frescos y una experiencia elegante inspirada en el sabor del mar y la fuerza de la brasa.
+</p>
+
+<a href="#" class="btn">
+Ver Menú
+</a>
+
+</div>
+
+</section>
+
+<!-- SERVICIOS -->
+
+<section>
+
+<div class="title">
+<h2>Nuestros Especiales</h2>
+<p>Lo mejor del mar y la parrilla</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+<h3>Parrilladas</h3>
+
+<p>
+Cortes premium preparados al fuego con sabor intenso y calidad excepcional.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+<h3>Ceviches</h3>
+
+<p>
+Mariscos frescos preparados con recetas tropicales y sabores únicos.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+<h3>Ambiente Premium</h3>
+
+<p>
+Un restaurante elegante con luces cálidas y ambiente moderno estilo premium.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACTO -->
+
+<section>
+
+<div class="contact">
+
+<h3>Reserva Tu Mesa</h3>
+
+<p>
+Disfruta una experiencia única en Mar y Fuego.
+</p>
+
+<a href="#" class="btn">
+Reservar Ahora
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Mar y Fuego Restaurante - Todos los derechos reservados
+
+</footer>
+
+</body>
+</html>
