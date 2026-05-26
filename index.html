@@ -14,295 +14,266 @@
 
 <style>
 
-/* RESET */
-
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-/* GENERAL */
-
-html{
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    background:#111111;
-    color:#F5F5F5;
-    font-family:'Poppins',sans-serif;
+background:#111;
+font-family:'Poppins',sans-serif;
+color:white;
+overflow-x:hidden;
 }
 
 /* HEADER */
 
 header{
-    width:100%;
-    padding:20px 8%;
-    position:fixed;
-    top:0;
-    left:0;
-    z-index:1000;
-    background:rgba(0,0,0,0.75);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid rgba(255,255,255,0.05);
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:15px 6%;
+background:rgba(0,0,0,0.75);
+backdrop-filter:blur(10px);
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
-/* NAV */
-
 nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 .logo{
-    font-size:32px;
-    font-family:'Cinzel',serif;
-    color:#D4A017;
-    font-weight:bold;
+font-family:'Cinzel',serif;
+font-size:28px;
+font-weight:bold;
+color:#D4A017;
 }
 
 .logo span{
-    color:#FF6B00;
+color:#FF6B00;
 }
 
 nav ul{
-    display:flex;
-    list-style:none;
-    gap:30px;
+display:flex;
+gap:25px;
+list-style:none;
 }
 
 nav ul li a{
-    text-decoration:none;
-    color:white;
-    transition:0.3s;
-    font-weight:500;
+text-decoration:none;
+color:white;
+font-size:15px;
+transition:0.3s;
 }
 
 nav ul li a:hover{
-    color:#FF6B00;
+color:#FF6B00;
 }
 
 /* HERO */
 
 .hero{
-    width:100%;
-    min-height:100vh;
+height:100vh;
 
-    background:
-    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.85)),
-    url('https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1800&auto=format&fit=crop');
+background:
+linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.85)),
+url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1600&auto=format&fit=crop');
 
-    background-size:cover;
-    background-position:center;
+background-size:cover;
+background-position:center;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
 
-    padding:20px;
+padding:20px;
 }
 
 .hero-content{
-    max-width:900px;
+max-width:850px;
 }
 
-.hero-content h1{
-    font-size:90px;
-    font-family:'Cinzel',serif;
-    color:#D4A017;
-    margin-bottom:20px;
-    letter-spacing:4px;
+.hero-logo{
+width:140px;
+margin-bottom:25px;
+opacity:0.95;
 }
 
-.hero-content h1 span{
-    color:#FF6B00;
+.hero h1{
+font-size:75px;
+font-family:'Cinzel',serif;
+color:#D4A017;
+margin-bottom:20px;
+line-height:1.1;
 }
 
-.hero-content p{
-    font-size:24px;
-    max-width:750px;
-    margin:auto;
-    margin-bottom:40px;
-    color:#ddd;
-    line-height:1.8;
+.hero h1 span{
+color:#FF6B00;
 }
 
-/* BOTON */
+.hero p{
+font-size:20px;
+line-height:1.8;
+color:#ddd;
+margin-bottom:35px;
+}
 
 .btn{
-    display:inline-block;
-    padding:16px 45px;
-    background:#FF6B00;
-    color:white;
-    text-decoration:none;
-    border-radius:50px;
-    font-weight:bold;
-    transition:0.3s;
+display:inline-block;
+padding:16px 42px;
+background:#FF6B00;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:bold;
+transition:0.3s;
 }
 
 .btn:hover{
-    background:#D4A017;
-    transform:scale(1.05);
+background:#D4A017;
+transform:scale(1.05);
 }
 
 /* SECCIONES */
 
 section{
-    padding:110px 8%;
+padding:100px 8%;
 }
 
 .title{
-    text-align:center;
-    margin-bottom:60px;
+text-align:center;
+margin-bottom:60px;
 }
 
 .title h2{
-    font-size:50px;
-    color:#D4A017;
-    font-family:'Cinzel',serif;
+font-size:48px;
+font-family:'Cinzel',serif;
+color:#D4A017;
+margin-bottom:10px;
 }
 
 .title p{
-    color:#aaa;
-    margin-top:10px;
-    font-size:18px;
+color:#aaa;
 }
 
-/* TARJETAS */
+/* CARDS */
 
 .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
 }
 
 .card{
-    background:#1c1c1c;
-    border-radius:20px;
-    overflow:hidden;
-    transition:0.4s;
-    border:1px solid #222;
+background:#1b1b1b;
+border-radius:20px;
+overflow:hidden;
+transition:0.4s;
+border:1px solid #222;
 }
 
 .card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 30px rgba(255,107,0,0.3);
+transform:translateY(-8px);
+box-shadow:0 0 25px rgba(255,107,0,0.2);
 }
 
 .card img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
+width:100%;
+height:240px;
+object-fit:cover;
 }
 
 .card-content{
-    padding:25px;
+padding:25px;
 }
 
 .card-content h3{
-    color:#FF6B00;
-    margin-bottom:10px;
-    font-size:28px;
+color:#FF6B00;
+font-size:28px;
+margin-bottom:10px;
 }
 
 .card-content p{
-    color:#ccc;
-    line-height:1.7;
+color:#ccc;
+line-height:1.7;
 }
 
 /* FOOTER */
 
 footer{
-    text-align:center;
-    padding:30px;
-    background:#0c0c0c;
-    color:#888;
+background:#0b0b0b;
+padding:30px;
+text-align:center;
+color:#777;
 }
 
-/* RESPONSIVE TABLET */
+/* MOBILE */
 
 @media(max-width:900px){
 
-.hero-content h1{
-    font-size:55px;
-}
-
-.hero-content p{
-    font-size:18px;
-}
-
-nav ul{
-    display:none;
-}
-
-.title h2{
-    font-size:38px;
-}
-
-}
-
-/* RESPONSIVE CELULAR */
-
-@media(max-width:768px){
-
 header{
-    padding:15px 5%;
+padding:15px 5%;
 }
 
 nav{
-    flex-direction:column;
-    gap:15px;
+flex-direction:column;
+gap:15px;
 }
 
 nav ul{
-    display:flex;
-    flex-direction:column;
-    text-align:center;
-    gap:15px;
+flex-wrap:wrap;
+justify-content:center;
+gap:18px;
 }
 
 .logo{
-    font-size:28px;
+font-size:24px;
 }
 
 .hero{
-    min-height:auto;
-    padding-top:180px;
-    padding-bottom:100px;
+padding-top:120px;
+height:auto;
+min-height:100vh;
 }
 
-.hero-content h1{
-    font-size:48px;
-    line-height:1.2;
+.hero-logo{
+width:100px;
 }
 
-.hero-content p{
-    font-size:17px;
-    line-height:1.7;
+.hero h1{
+font-size:46px;
+}
+
+.hero p{
+font-size:17px;
+line-height:1.7;
 }
 
 .btn{
-    padding:14px 35px;
-    font-size:16px;
-}
-
-.title h2{
-    font-size:34px;
-}
-
-.cards{
-    grid-template-columns:1fr;
-}
-
-.card img{
-    height:220px;
+padding:14px 32px;
+font-size:15px;
 }
 
 section{
-    padding:80px 5%;
+padding:80px 5%;
+}
+
+.title h2{
+font-size:36px;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+.card img{
+height:220px;
 }
 
 }
@@ -324,15 +295,10 @@ MAR <span>Y FUEGO</span>
 <ul>
 
 <li><a href="index.html">Inicio</a></li>
-
 <li><a href="nosotros.html">Nosotros</a></li>
-
 <li><a href="menu.html">Menú</a></li>
-
 <li><a href="reservas.html">Reservas</a></li>
-
 <li><a href="delivery.html">Delivery</a></li>
-
 <li><a href="contacto.html">Contacto</a></li>
 
 </ul>
@@ -347,12 +313,14 @@ MAR <span>Y FUEGO</span>
 
 <div class="hero-content">
 
+<img src="logo.png" class="hero-logo">
+
 <h1>
 MAR <span>Y FUEGO</span>
 </h1>
 
 <p>
-Parrilladas al fuego, mariscos frescos y un ambiente pensado para disfrutar buenos momentos alrededor de la comida.
+El equilibrio perfecto entre la parrilla y los sabores del mar en un ambiente moderno y acogedor.
 </p>
 
 <a href="menu.html" class="btn">
@@ -372,7 +340,7 @@ Ver Menú
 <h2>Nuestros Especiales</h2>
 
 <p>
-Sabores preparados con dedicación y pasión por la cocina.
+Platillos preparados con dedicación y sabor auténtico.
 </p>
 
 </div>
@@ -388,7 +356,7 @@ Sabores preparados con dedicación y pasión por la cocina.
 <h3>Parrilladas</h3>
 
 <p>
-Cortes preparados al fuego con recetas llenas de sabor y dedicación en cada detalle.
+Carnes preparadas al fuego con acompañamientos especiales.
 </p>
 
 </div>
@@ -404,7 +372,7 @@ Cortes preparados al fuego con recetas llenas de sabor y dedicación en cada det
 <h3>Ceviches</h3>
 
 <p>
-Mariscos frescos preparados con ingredientes naturales y sabores tropicales.
+Mariscos frescos preparados con ingredientes naturales.
 </p>
 
 </div>
@@ -420,7 +388,7 @@ Mariscos frescos preparados con ingredientes naturales y sabores tropicales.
 <h3>Ambiente Acogedor</h3>
 
 <p>
-Un espacio moderno y cómodo, ideal para compartir buenos momentos con familia y amigos.
+Un espacio moderno y cómodo para disfrutar buenos momentos.
 </p>
 
 </div>
