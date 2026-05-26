@@ -14,264 +14,257 @@
 
 <style>
 
-/* RESET */
-
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-/* GENERAL */
-
 body{
-    background:#111111;
-    color:#F5F5F5;
-    font-family:'Poppins',sans-serif;
+background:#111111;
+color:white;
+font-family:'Poppins',sans-serif;
 }
 
 /* HEADER */
 
 header{
-    width:100%;
-    padding:20px 8%;
-    position:fixed;
-    top:0;
-    left:0;
-    z-index:1000;
-    background:rgba(0,0,0,0.75);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid rgba(255,255,255,0.05);
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:15px 6%;
+background:rgba(0,0,0,0.75);
+backdrop-filter:blur(10px);
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
-/* NAV */
-
 nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 .logo{
-    font-size:32px;
-    font-family:'Cinzel',serif;
-    color:#D4A017;
-    font-weight:bold;
+font-size:30px;
+font-family:'Cinzel',serif;
+font-weight:bold;
+color:#D4A017;
 }
 
 .logo span{
-    color:#FF6B00;
+color:#FF6B00;
 }
 
 nav ul{
-    display:flex;
-    list-style:none;
-    gap:30px;
+display:flex;
+gap:25px;
+list-style:none;
 }
 
 nav ul li a{
-    text-decoration:none;
-    color:white;
-    transition:0.3s;
-    font-weight:500;
+text-decoration:none;
+color:white;
+transition:0.3s;
 }
 
 nav ul li a:hover{
-    color:#FF6B00;
+color:#FF6B00;
 }
 
-/* SECCION */
+/* SECTION */
 
 section{
-    padding:140px 8% 100px;
+padding:150px 8% 100px;
 }
 
 .title{
-    text-align:center;
-    margin-bottom:60px;
+text-align:center;
+margin-bottom:60px;
 }
 
 .title h2{
-    font-size:55px;
-    color:#D4A017;
-    font-family:'Cinzel',serif;
+font-size:55px;
+font-family:'Cinzel',serif;
+color:#D4A017;
+margin-bottom:15px;
 }
 
 .title p{
-    color:#bbb;
-    margin-top:15px;
-    font-size:18px;
+color:#bbb;
+font-size:18px;
+line-height:1.8;
 }
 
-/* CARDS */
+/* CARRITO */
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:35px;
+.cart-container{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:40px;
 }
 
-.card{
-    background:#1b1b1b;
-    border-radius:20px;
-    overflow:hidden;
-    transition:0.4s;
-    border:1px solid #222;
+.cart-items{
+background:#1b1b1b;
+padding:35px;
+border-radius:20px;
+border:1px solid #222;
 }
 
-.card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 25px rgba(255,107,0,0.3);
+.cart-item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 0;
+border-bottom:1px solid #333;
+gap:20px;
 }
 
-.card img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
+.cart-item-info h3{
+color:#FF6B00;
+margin-bottom:5px;
 }
 
-.card-content{
-    padding:25px;
+.cart-item-info p{
+color:#bbb;
 }
 
-.card-content h3{
-    color:#FF6B00;
-    font-size:28px;
-    margin-bottom:10px;
+.cart-buttons{
+display:flex;
+align-items:center;
+gap:10px;
 }
 
-.card-content p{
-    color:#ccc;
-    line-height:1.7;
-    margin-bottom:15px;
+.cart-buttons button{
+width:35px;
+height:35px;
+border:none;
+border-radius:10px;
+background:#FF6B00;
+color:white;
+font-weight:bold;
+cursor:pointer;
 }
 
-/* BOTON */
+.remove-btn{
+background:#aa2222 !important;
+}
+
+.cart-summary{
+background:#1b1b1b;
+padding:35px;
+border-radius:20px;
+height:fit-content;
+border:1px solid #222;
+}
+
+.cart-summary h3{
+font-size:30px;
+color:#D4A017;
+margin-bottom:25px;
+}
+
+.total{
+font-size:28px;
+color:#FF6B00;
+margin-bottom:30px;
+font-weight:bold;
+}
+
+/* FORM */
+
+.form-group{
+margin-bottom:20px;
+}
+
+.form-group input,
+.form-group textarea{
+width:100%;
+padding:16px;
+background:#222;
+border:1px solid #333;
+border-radius:14px;
+color:white;
+outline:none;
+font-size:15px;
+}
+
+.form-group textarea{
+height:120px;
+resize:none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+border:1px solid #FF6B00;
+}
 
 .btn{
-    display:inline-block;
-    padding:14px 35px;
-    background:#FF6B00;
-    color:white;
-    text-decoration:none;
-    border-radius:50px;
-    font-weight:bold;
-    border:none;
-    cursor:pointer;
-    transition:0.3s;
+width:100%;
+padding:16px;
+border:none;
+border-radius:14px;
+background:#FF6B00;
+color:white;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
 }
 
 .btn:hover{
-    background:#D4A017;
-    transform:scale(1.05);
+background:#D4A017;
 }
 
-/* FORMULARIO */
+/* EMPTY */
 
-.contact{
-    background:#181818;
-    border-radius:25px;
-    padding:50px;
-    text-align:center;
-}
-
-.contact h3{
-    font-size:40px;
-    color:#D4A017;
-    margin-bottom:20px;
-}
-
-.contact p{
-    margin-bottom:30px;
-    color:#ccc;
-}
-
-.reservation-form{
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-    max-width:700px;
-    margin:auto;
-}
-
-.reservation-form input,
-.reservation-form select,
-.reservation-form textarea{
-
-    width:100%;
-    padding:18px;
-    border:none;
-    border-radius:15px;
-    background:#222;
-    color:white;
-    font-size:16px;
-    outline:none;
-    border:1px solid #333;
-}
-
-.reservation-form textarea{
-    resize:none;
-    height:140px;
-}
-
-.reservation-form input:focus,
-.reservation-form select:focus,
-.reservation-form textarea:focus{
-
-    border:1px solid #FF6B00;
-    box-shadow:0 0 15px rgba(255,107,0,0.3);
+.empty-cart{
+text-align:center;
+color:#888;
+padding:40px 0;
 }
 
 /* FOOTER */
 
 footer{
-    text-align:center;
-    padding:30px;
-    background:#0c0c0c;
-    color:#888;
+background:#0b0b0b;
+padding:30px;
+text-align:center;
+color:#777;
+margin-top:80px;
 }
 
 /* RESPONSIVE */
 
-@media(max-width:768px){
-
-header{
-    padding:15px 5%;
-}
+@media(max-width:950px){
 
 nav{
-    flex-direction:column;
-    gap:15px;
+flex-direction:column;
+gap:15px;
 }
 
 nav ul{
-    flex-direction:column;
-    text-align:center;
-    gap:15px;
-}
-
-.logo{
-    font-size:28px;
+flex-wrap:wrap;
+justify-content:center;
+gap:18px;
 }
 
 section{
-    padding:180px 5% 80px;
+padding:200px 5% 80px;
 }
 
 .title h2{
-    font-size:38px;
+font-size:42px;
 }
 
-.cards{
-    grid-template-columns:1fr;
+.cart-container{
+grid-template-columns:1fr;
 }
 
-.card img{
-    height:220px;
-}
-
-.contact{
-    padding:30px;
+.cart-item{
+flex-direction:column;
+align-items:flex-start;
 }
 
 }
@@ -293,15 +286,10 @@ MAR <span>Y FUEGO</span>
 <ul>
 
 <li><a href="index.html">Inicio</a></li>
-
 <li><a href="nosotros.html">Nosotros</a></li>
-
 <li><a href="menu.html">Menú</a></li>
-
 <li><a href="reservas.html">Reservas</a></li>
-
 <li><a href="delivery.html">Delivery</a></li>
-
 <li><a href="contacto.html">Contacto</a></li>
 
 </ul>
@@ -310,133 +298,61 @@ MAR <span>Y FUEGO</span>
 
 </header>
 
-<!-- DELIVERY -->
-
 <section>
 
 <div class="title">
 
-<h2>Servicio Delivery</h2>
+<h2>Tu Pedido</h2>
 
 <p>
-Disfruta nuestros platillos premium desde la comodidad de tu hogar.
+Revisa tus productos y confirma tu pedido.
 </p>
 
 </div>
 
-<div class="cards">
+<div class="cart-container">
 
-<!-- CARD 1 -->
+<!-- PRODUCTOS -->
 
-<div class="card">
+<div class="cart-items">
 
-<img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop">
-
-<div class="card-content">
-
-<h3>Parrillada Premium</h3>
-
-<p>
-Jugosos cortes premium preparados al fuego con sabores intensos.
-</p>
-
-<p><strong>Q120</strong></p>
-
-<a href="#" class="btn">
-Ordenar
-</a>
+<div id="cart-items">
 
 </div>
 
 </div>
 
-<!-- CARD 2 -->
+<!-- RESUMEN -->
 
-<div class="card">
+<div class="cart-summary">
 
-<img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=1200&auto=format&fit=crop">
+<h3>Resumen</h3>
 
-<div class="card-content">
-
-<h3>Ceviche Tropical</h3>
-
-<p>
-Mariscos frescos con recetas tropicales y un toque elegante.
-</p>
-
-<p><strong>Q85</strong></p>
-
-<a href="#" class="btn">
-Ordenar
-</a>
-
+<div class="total" id="total">
+Q0
 </div>
 
+<div class="form-group">
+<input type="text" placeholder="Nombre Completo">
 </div>
 
-<!-- CARD 3 -->
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=1200&auto=format&fit=crop">
-
-<div class="card-content">
-
-<h3>Combo Luxury</h3>
-
-<p>
-Parrillada + bebida premium + postre especial del chef.
-</p>
-
-<p><strong>Q180</strong></p>
-
-<a href="#" class="btn">
-Ordenar
-</a>
-
+<div class="form-group">
+<input type="tel" placeholder="Número de Teléfono">
 </div>
 
+<div class="form-group">
+<input type="text" placeholder="Dirección">
 </div>
 
+<div class="form-group">
+<textarea placeholder="Detalles adicionales"></textarea>
 </div>
 
-<!-- FORMULARIO -->
-
-<div class="contact" style="margin-top:80px;">
-
-<h3>Realizar Pedido</h3>
-
-<p>
-Completa tus datos para enviar tu orden.
-</p>
-
-<form class="reservation-form">
-
-<input type="text" placeholder="Nombre Completo" required>
-
-<input type="tel" placeholder="Número de Teléfono" required>
-
-<input type="text" placeholder="Dirección de Entrega" required>
-
-<select required>
-
-<option value="">Método de Pago</option>
-
-<option>Efectivo</option>
-
-<option>Tarjeta</option>
-
-<option>Transferencia</option>
-
-</select>
-
-<textarea placeholder="Detalles del pedido"></textarea>
-
-<button type="submit" class="btn">
+<button class="btn">
 Confirmar Pedido
 </button>
 
-</form>
+</div>
 
 </div>
 
@@ -447,6 +363,116 @@ Confirmar Pedido
 © 2026 Mar y Fuego Restaurante - Todos los derechos reservados
 
 </footer>
+
+<script>
+
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+const cartItems = document.getElementById("cart-items");
+const totalElement = document.getElementById("total");
+
+function renderCart(){
+
+cartItems.innerHTML = "";
+
+let total = 0;
+
+if(carrito.length === 0){
+
+cartItems.innerHTML = `
+<div class="empty-cart">
+<h2>No hay productos en el carrito</h2>
+</div>
+`;
+
+totalElement.innerHTML = "Q0";
+
+return;
+
+}
+
+carrito.forEach((producto,index)=>{
+
+total += producto.precio * producto.cantidad;
+
+cartItems.innerHTML += `
+
+<div class="cart-item">
+
+<div class="cart-item-info">
+
+<h3>${producto.nombre}</h3>
+
+<p>
+Q${producto.precio} x ${producto.cantidad}
+</p>
+
+</div>
+
+<div class="cart-buttons">
+
+<button onclick="decreaseQuantity(${index})">
+-
+</button>
+
+<button onclick="increaseQuantity(${index})">
++
+</button>
+
+<button class="remove-btn"
+onclick="removeItem(${index})">
+X
+</button>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+totalElement.innerHTML = "Q" + total;
+
+localStorage.setItem("carrito", JSON.stringify(carrito));
+
+}
+
+function increaseQuantity(index){
+
+carrito[index].cantidad++;
+
+renderCart();
+
+}
+
+function decreaseQuantity(index){
+
+if(carrito[index].cantidad > 1){
+
+carrito[index].cantidad--;
+
+}else{
+
+carrito.splice(index,1);
+
+}
+
+renderCart();
+
+}
+
+function removeItem(index){
+
+carrito.splice(index,1);
+
+renderCart();
+
+}
+
+renderCart();
+
+</script>
 
 </body>
 
