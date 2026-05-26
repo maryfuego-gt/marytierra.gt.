@@ -14,16 +14,21 @@
 
 <style>
 
+/* RESET */
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
 
+/* GENERAL */
+
 body{
 background:#111111;
 color:white;
 font-family:'Poppins',sans-serif;
+overflow-x:hidden;
 }
 
 /* HEADER */
@@ -33,12 +38,14 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-padding:15px 6%;
+padding:20px 8%;
 background:rgba(0,0,0,0.75);
 backdrop-filter:blur(10px);
 z-index:1000;
 border-bottom:1px solid rgba(255,255,255,0.05);
 }
+
+/* NAV */
 
 nav{
 display:flex;
@@ -47,7 +54,7 @@ align-items:center;
 }
 
 .logo{
-font-size:30px;
+font-size:32px;
 font-family:'Cinzel',serif;
 font-weight:bold;
 color:#D4A017;
@@ -59,14 +66,20 @@ color:#FF6B00;
 
 nav ul{
 display:flex;
-gap:25px;
+gap:30px;
 list-style:none;
+}
+
+nav ul li{
+text-align:center;
 }
 
 nav ul li a{
 text-decoration:none;
 color:white;
 transition:0.3s;
+font-size:17px;
+font-weight:500;
 }
 
 nav ul li a:hover{
@@ -76,8 +89,10 @@ color:#FF6B00;
 /* SECTION */
 
 section{
-padding:140px 8% 100px;
+padding:150px 8% 100px;
 }
+
+/* TITLE */
 
 .title{
 text-align:center;
@@ -95,7 +110,7 @@ margin-bottom:15px;
 color:#bbb;
 font-size:18px;
 line-height:1.8;
-max-width:800px;
+max-width:850px;
 margin:auto;
 }
 
@@ -117,6 +132,7 @@ text-align:center;
 color:#999;
 text-align:center;
 margin-bottom:40px;
+line-height:1.7;
 }
 
 /* CARDS */
@@ -162,6 +178,8 @@ line-height:1.7;
 margin-bottom:15px;
 }
 
+/* PRECIO */
+
 .price{
 color:#D4A017;
 font-size:22px;
@@ -202,23 +220,49 @@ color:#777;
 
 @media(max-width:900px){
 
-nav{
-flex-direction:column;
-gap:15px;
+header{
+padding:20px 5%;
 }
 
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
+nav{
+flex-direction:column;
 gap:18px;
 }
 
+.logo{
+font-size:24px;
+text-align:center;
+}
+
+nav ul{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+width:100%;
+padding:0;
+list-style:none;
+}
+
+nav ul li{
+text-align:center;
+}
+
+nav ul li a{
+font-size:18px;
+color:white;
+text-decoration:none;
+}
+
 section{
-padding:190px 5% 80px;
+padding:220px 5% 80px;
 }
 
 .title h2{
 font-size:42px;
+}
+
+.title p{
+font-size:17px;
 }
 
 .menu-category h2{
@@ -279,7 +323,7 @@ Sabores preparados con dedicación y el equilibrio perfecto entre el mar y la pa
 <h2>Cortes y Parrilladas</h2>
 
 <p>
-Preparados al fuego con sabores intensos.
+Preparados al fuego con sabores intensos y acompañamientos especiales.
 </p>
 
 <div class="cards">
@@ -327,6 +371,31 @@ Q165
 
 <button class="add-cart"
 onclick="addToCart('Costillas Ahumadas',165)">
+Agregar al carrito
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1558030006-450675393462?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>New York Steak</h3>
+
+<p>
+Corte jugoso acompañado de papas y vegetales asados.
+</p>
+
+<div class="price">
+Q195
+</div>
+
+<button class="add-cart"
+onclick="addToCart('New York Steak',195)">
 Agregar al carrito
 </button>
 
@@ -411,7 +480,7 @@ Agregar al carrito
 <h2>Postres</h2>
 
 <p>
-El complemento perfecto después de una buena comida.
+El complemento perfecto para acompañar tu comida.
 </p>
 
 <div class="cards">
@@ -434,6 +503,31 @@ Q45
 
 <button class="add-cart"
 onclick="addToCart('Cheesecake',45)">
+Agregar al carrito
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>Brownie Artesanal</h3>
+
+<p>
+Brownie tibio acompañado de chocolate y nueces.
+</p>
+
+<div class="price">
+Q40
+</div>
+
+<button class="add-cart"
+onclick="addToCart('Brownie Artesanal',40)">
 Agregar al carrito
 </button>
 
@@ -510,7 +604,8 @@ Agregar al carrito
 </div>
 
 </div>
-  <!-- COMBOS -->
+
+<!-- COMBOS -->
 
 <div class="menu-category">
 
@@ -521,10 +616,6 @@ Opciones completas para disfrutar diferentes sabores en un solo pedido.
 </p>
 
 <div class="cards">
-
-  
-  <!-- COMBOS -->
-<!-- COMBO 1 -->
 
 <div class="card">
 
@@ -551,8 +642,6 @@ Agregar al carrito
 
 </div>
 
-<!-- COMBO 2 -->
-
 <div class="card">
 
 <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=1200&auto=format&fit=crop">
@@ -578,8 +667,6 @@ Agregar al carrito
 
 </div>
 
-<!-- COMBO 3 -->
-
 <div class="card">
 
 <img src="https://images.unsplash.com/photo-1529692236671-f1de7ce1c8ff?q=80&w=1200&auto=format&fit=crop">
@@ -604,8 +691,6 @@ Agregar al carrito
 </div>
 
 </div>
-
-<!-- COMBO 4 -->
 
 <div class="card">
 
