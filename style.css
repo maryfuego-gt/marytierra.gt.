@@ -1,1 +1,323 @@
+/* RESET */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* GENERAL */
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#111111;
+    color:#F5F5F5;
+    font-family:'Poppins',sans-serif;
+}
+
+/* HEADER */
+
+header{
+    width:100%;
+    padding:20px 8%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:rgba(0,0,0,0.75);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+/* NAV */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:32px;
+    font-family:'Cinzel',serif;
+    color:#D4A017;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#FF6B00;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+    font-weight:500;
+    position:relative;
+}
+
+nav ul li a:hover{
+    color:#FF6B00;
+}
+
+/* HERO */
+
+.hero{
+    width:100%;
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
+    url('https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1600&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:85px;
+    font-family:'Cinzel',serif;
+    color:#D4A017;
+    margin-bottom:20px;
+}
+
+.hero-content h1 span{
+    color:#FF6B00;
+}
+
+.hero-content p{
+    font-size:22px;
+    max-width:750px;
+    margin:auto;
+    margin-bottom:35px;
+    color:#ddd;
+    line-height:1.7;
+}
+
+/* BOTONES */
+
+.btn{
+    display:inline-block;
+    padding:15px 40px;
+    background:#FF6B00;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+    transition:0.3s;
+    border:none;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#D4A017;
+    transform:scale(1.05);
+}
+
+/* SECCIONES */
+
+section{
+    padding:110px 8%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.title h2{
+    font-size:50px;
+    color:#D4A017;
+    font-family:'Cinzel',serif;
+}
+
+.title p{
+    color:#aaa;
+    margin-top:10px;
+    font-size:18px;
+}
+
+/* TARJETAS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#1c1c1c;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+    border:1px solid #222;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px rgba(255,107,0,0.3);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card-content h3{
+    color:#FF6B00;
+    margin-bottom:10px;
+    font-size:28px;
+}
+
+.card-content p{
+    color:#ccc;
+    line-height:1.7;
+    margin-bottom:10px;
+}
+
+/* FORMULARIOS */
+
+.contact,
+.contact-form{
+    background:#181818;
+    border-radius:25px;
+    padding:50px;
+    text-align:center;
+}
+
+.contact h3,
+.contact-form h3{
+    font-size:40px;
+    color:#D4A017;
+    margin-bottom:20px;
+}
+
+.contact p{
+    margin-bottom:30px;
+    color:#ccc;
+    line-height:1.8;
+}
+
+/* INPUTS */
+
+.reservation-form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    max-width:700px;
+    margin:auto;
+    margin-top:40px;
+}
+
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea{
+
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:15px;
+    background:#222;
+    color:white;
+    font-size:16px;
+    outline:none;
+    border:1px solid #333;
+    transition:0.3s;
+}
+
+.reservation-form input:focus,
+.reservation-form select:focus,
+.reservation-form textarea:focus{
+
+    border:1px solid #FF6B00;
+    box-shadow:0 0 15px rgba(255,107,0,0.3);
+}
+
+.reservation-form textarea{
+    resize:none;
+    height:150px;
+}
+
+/* CONTACTO */
+
+.contact-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:40px;
+}
+
+.contact-info{
+    background:#1c1c1c;
+    padding:40px;
+    border-radius:20px;
+    border:1px solid #222;
+}
+
+.contact-info h3{
+    color:#D4A017;
+    margin-bottom:20px;
+    font-size:35px;
+}
+
+.contact-info p{
+    color:#ccc;
+    margin-bottom:15px;
+    line-height:1.7;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#0c0c0c;
+    color:#888;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero-content h1{
+    font-size:55px;
+}
+
+.hero-content p{
+    font-size:18px;
+}
+
+nav ul{
+    display:none;
+}
+
+.title h2{
+    font-size:38px;
+}
+
+.contact,
+.contact-form,
+.contact-info{
+    padding:30px;
+}
+
+}
