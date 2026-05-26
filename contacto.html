@@ -260,91 +260,69 @@ section{
 }
 
 }
-/* HEADER */
+@media(max-width:900px){
 
 header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:15px 6%;
-background:rgba(0,0,0,0.75);
-backdrop-filter:blur(10px);
-z-index:1000;
-border-bottom:1px solid rgba(255,255,255,0.05);
+padding:20px 5%;
 }
 
 nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:relative;
+flex-direction:column;
+gap:20px;
 }
 
 .logo{
-font-size:30px;
-font-family:'Cinzel',serif;
-font-weight:bold;
-color:#D4A017;
+font-size:22px;
+text-align:center;
 }
 
-.logo span{
-color:#FF6B00;
-}
-
-#nav-links{
-display:flex;
-gap:25px;
-list-style:none;
-}
-
-#nav-links li a{
-text-decoration:none;
-color:white;
-transition:0.3s;
-}
-
-#nav-links li a:hover{
-color:#FF6B00;
-}
-
-/* BOTON MENU */
-
-.menu-toggle{
-display:none;
-font-size:34px;
-cursor:pointer;
-color:white;
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-.menu-toggle{
-display:block;
-}
-
-#nav-links{
-position:absolute;
-top:80px;
-right:0;
+nav ul{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
 width:100%;
-background:#151515;
-flex-direction:column;
-align-items:center;
-padding:30px 0;
-gap:25px;
-display:none;
-border-radius:0 0 20px 20px;
+padding:0;
 }
 
-#nav-links.active{
-display:flex;
+nav ul li{
+text-align:center;
+}
+
+nav ul li a{
+font-size:17px;
+}
+
+.hero{
+padding-top:230px;
+}
+
+.hero-logo{
+width:80px;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:58px;
+line-height:1.1;
+}
+
+.hero p{
+font-size:17px;
+line-height:1.8;
+padding:0 10px;
+}
+
+.btn{
+padding:15px 38px;
+font-size:17px;
 }
 
 section{
-padding-top:180px;
+padding:80px 5%;
+}
+
+.cards{
+grid-template-columns:1fr;
 }
 
 }
@@ -471,16 +449,7 @@ En Mar y Fuego queremos que cada cliente se sienta escuchado y bien recibido. Si
 © 2026 Mar y Fuego Restaurante - Todos los derechos reservados
 
 </footer>
-<script>
 
-function toggleMenu(){
-
-document.getElementById("nav-links")
-.classList.toggle("active");
-
-}
-
-</script>
 </body>
 
 </html>
