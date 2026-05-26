@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Mar y Fuego</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -15,6 +17,10 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
@@ -75,10 +81,11 @@ nav ul li a:hover{
 .hero{
     width:100%;
     height:100vh;
+
     background:
     linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
     url('https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1600&auto=format&fit=crop');
-    
+
     background-size:cover;
     background-position:center;
 
@@ -117,6 +124,8 @@ nav ul li a:hover{
     border-radius:50px;
     font-weight:bold;
     transition:0.3s;
+    border:none;
+    cursor:pointer;
 }
 
 .btn:hover{
@@ -188,8 +197,9 @@ section{
     line-height:1.6;
 }
 
-/* CONTACTO */
-    .reservation-form{
+/* FORMULARIO */
+
+.reservation-form{
     display:flex;
     flex-direction:column;
     gap:20px;
@@ -225,6 +235,8 @@ section{
     resize:none;
     height:140px;
 }
+
+/* CONTACTO */
 
 .contact{
     background:#181818;
@@ -265,11 +277,16 @@ nav ul{
     display:none;
 }
 
+.title h2{
+    font-size:38px;
+}
+
 }
 
 </style>
 
 </head>
+
 <body>
 
 <header>
@@ -304,14 +321,15 @@ MAR <span>Y FUEGO</span>
 Parrilladas premium, ceviches frescos y una experiencia elegante inspirada en el sabor del mar y la fuerza de la brasa.
 </p>
 
-<a href="#" class="btn">
+<a href="#menu" class="btn">
 Ver Menú
 </a>
 
 </div>
 
-<section id="menu">
-    <!-- NOSOTROS -->
+</section>
+
+<!-- NOSOTROS -->
 
 <section id="nosotros">
 
@@ -358,12 +376,12 @@ Diseño moderno, luces cálidas y un ambiente sofisticado pensado para disfrutar
 
 </section>
 
-<!-- SERVICIOS -->
+<!-- MENU -->
 
-<section>
+<section id="menu">
 
 <div class="title">
-<h2>Nuestras Especiales</h2>
+<h2>Nuestros Especiales</h2>
 <p>Lo mejor del mar y la parrilla</p>
 </div>
 
@@ -374,6 +392,7 @@ Diseño moderno, luces cálidas y un ambiente sofisticado pensado para disfrutar
 <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop">
 
 <div class="card-content">
+
 <h3>Parrilladas</h3>
 
 <p>
@@ -389,6 +408,7 @@ Cortes premium preparados al fuego con sabor intenso y calidad excepcional.
 <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=1200&auto=format&fit=crop">
 
 <div class="card-content">
+
 <h3>Ceviches</h3>
 
 <p>
@@ -404,6 +424,7 @@ Mariscos frescos preparados con recetas tropicales y sabores únicos.
 <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1200&auto=format&fit=crop">
 
 <div class="card-content">
+
 <h3>Ambiente Premium</h3>
 
 <p>
@@ -418,9 +439,9 @@ Un restaurante elegante con luces cálidas y ambiente moderno estilo premium.
 
 </section>
 
-<!-- CONTACTO -->
+<!-- RESERVAS -->
 
-<section>
+<section id="reservas">
 
 <div class="contact">
 
@@ -461,9 +482,33 @@ Reservar Ahora
 </form>
 
 </div>
-    
-<section id="reservas">
-    
+
+</section>
+
+<!-- CONTACTO -->
+
+<section id="contacto">
+
+<div class="contact">
+
+<h3>Contáctanos</h3>
+
+<p>
+📍 Chimaltenango, Guatemala
+</p>
+
+<p>
+📞 +502 1234-5678
+</p>
+
+<p>
+✉ contacto @maryfuego.gt@gmail.com
+</p>
+
+</div>
+
+</section>
+
 <footer>
 
 © 2026 Mar y Fuego Restaurante - Todos los derechos reservados
