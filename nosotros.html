@@ -8,7 +8,376 @@
 
 <title>Nosotros | Mar y Fuego</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com"><!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nosotros | Mar y Fuego</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* GENERAL */
+
+body{
+    background:#111111;
+    color:#F5F5F5;
+    font-family:'Poppins',sans-serif;
+}
+
+/* HEADER */
+
+header{
+    width:100%;
+    padding:20px 8%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:rgba(0,0,0,0.75);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+/* NAV */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:32px;
+    font-family:'Cinzel',serif;
+    color:#D4A017;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#FF6B00;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    color:#FF6B00;
+}
+
+/* SECCION */
+
+section{
+    padding:140px 8% 100px;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.title h2{
+    font-size:55px;
+    color:#D4A017;
+    font-family:'Cinzel',serif;
+}
+
+.title p{
+    color:#bbb;
+    margin-top:15px;
+    font-size:18px;
+    line-height:1.7;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+.card{
+    background:#1b1b1b;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+    border:1px solid #222;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(255,107,0,0.25);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:28px;
+}
+
+.card-content h3{
+    color:#FF6B00;
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.card-content p{
+    color:#ccc;
+    line-height:1.9;
+    font-size:16px;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#0c0c0c;
+    color:#888;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+header{
+    padding:15px 5%;
+}
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav ul{
+    flex-direction:column;
+    text-align:center;
+    gap:15px;
+}
+
+.logo{
+    font-size:28px;
+}
+
+section{
+    padding:180px 5% 80px;
+}
+
+.title h2{
+    font-size:40px;
+}
+
+.cards{
+    grid-template-columns:1fr;
+}
+
+.card img{
+    height:220px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">
+MAR <span>Y FUEGO</span>
+</div>
+
+<ul>
+
+<li><a href="index.html">Inicio</a></li>
+
+<li><a href="nosotros.html">Nosotros</a></li>
+
+<li><a href="menu.html">Menú</a></li>
+
+<li><a href="reservas.html">Reservas</a></li>
+
+<li><a href="delivery.html">Delivery</a></li>
+
+<li><a href="contacto.html">Contacto</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- NOSOTROS -->
+
+<section>
+
+<div class="title">
+
+<h2>Sobre Nosotros</h2>
+
+<p>
+Más que un restaurante, somos un espacio creado para compartir momentos especiales alrededor de la buena comida, el ambiente cálido y la pasión por la cocina.
+</p>
+
+</div>
+
+<div class="cards">
+
+<!-- QUIENES SOMOS -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>¿Quiénes Somos?</h3>
+
+<p>
+Mar y Fuego nace de la idea de unir dos mundos llenos de sabor: la frescura del mar y la intensidad de la parrilla. Nuestro restaurante busca ofrecer una experiencia auténtica donde cada platillo, cada detalle y cada espacio transmitan pasión, calidad y dedicación.
+</p>
+
+</div>
+
+</div>
+
+<!-- MISION -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>Misión</h3>
+
+<p>
+Brindar a nuestros clientes una experiencia gastronómica memorable, preparando platillos con ingredientes frescos, atención cercana y un ambiente cómodo donde las personas puedan disfrutar momentos especiales con familia y amigos.
+</p>
+
+</div>
+
+</div>
+
+<!-- VISION -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>Visión</h3>
+
+<p>
+Ser un restaurante reconocido en Guatemala por nuestra dedicación, innovación culinaria y compromiso con cada cliente, convirtiéndonos en un lugar al que las personas siempre quieran regresar.
+</p>
+
+</div>
+
+</div>
+
+<!-- QUE HACEMOS -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>Lo Que Hacemos</h3>
+
+<p>
+Creamos platillos inspirados en sabores del mar y cortes preparados al fuego, cuidando cada detalle desde la preparación hasta la presentación para lograr comidas llenas de sabor y personalidad.
+</p>
+
+</div>
+
+</div>
+
+<!-- SABOR -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>Nuestra Cocina</h3>
+
+<p>
+Nos enfocamos en mantener un equilibrio entre sabor, frescura y creatividad. Cada receta es preparada con dedicación para que nuestros clientes disfruten una experiencia diferente en cada visita.
+</p>
+
+</div>
+
+</div>
+
+<!-- EXPERIENCIA -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>La Experiencia</h3>
+
+<p>
+Queremos que cada persona que visite Mar y Fuego se sienta bienvenida. Nuestro ambiente está diseñado para compartir momentos especiales, disfrutar buena comida y crear recuerdos inolvidables.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Mar y Fuego Restaurante - Todos los derechos reservados
+
+</footer>
+
+</body>
+
+</html>
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
