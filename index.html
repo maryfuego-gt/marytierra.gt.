@@ -47,16 +47,35 @@ justify-content:space-between;
 align-items:center;
 }
 
+/* LOGO */
+
 .logo{
+display:flex;
+align-items:center;
+gap:8px;
 font-family:'Cinzel',serif;
-font-size:28px;
 font-weight:bold;
-color:#D4A017;
+letter-spacing:2px;
 }
 
-.logo span{
-color:#FF6B00;
+.mar{
+font-size:30px;
+color:#ffb347;
 }
+
+.y{
+font-size:20px;
+color:#ff944d;
+margin-top:2px;
+}
+
+.fuego{
+font-size:30px;
+color:#ff5e00;
+text-shadow:0 0 12px rgba(255,94,0,0.25);
+}
+
+/* MENU */
 
 nav ul{
 display:flex;
@@ -64,11 +83,16 @@ gap:25px;
 list-style:none;
 }
 
+nav ul li{
+text-align:center;
+}
+
 nav ul li a{
 text-decoration:none;
 color:white;
 font-size:15px;
 transition:0.3s;
+font-weight:500;
 }
 
 nav ul li a:hover{
@@ -108,13 +132,23 @@ opacity:0.95;
 .hero h1{
 font-size:75px;
 font-family:'Cinzel',serif;
-color:#D4A017;
 margin-bottom:20px;
 line-height:1.1;
+letter-spacing:3px;
 }
 
-.hero h1 span{
-color:#FF6B00;
+.hero .mar-title{
+color:#ffb347;
+}
+
+.hero .y-title{
+color:#ff944d;
+font-size:55px;
+}
+
+.hero .fuego-title{
+color:#ff5e00;
+text-shadow:0 0 18px rgba(255,94,0,0.25);
 }
 
 .hero p{
@@ -160,6 +194,7 @@ margin-bottom:10px;
 
 .title p{
 color:#aaa;
+line-height:1.8;
 }
 
 /* CARDS */
@@ -218,68 +253,6 @@ color:#777;
 @media(max-width:900px){
 
 header{
-padding:15px 5%;
-}
-
-nav{
-flex-direction:column;
-gap:15px;
-}
-
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
-gap:18px;
-}
-
-.logo{
-font-size:24px;
-}
-
-.hero{
-padding-top:120px;
-height:auto;
-min-height:100vh;
-}
-
-.hero-logo{
-width:100px;
-}
-
-.hero h1{
-font-size:46px;
-}
-
-.hero p{
-font-size:17px;
-line-height:1.7;
-}
-
-.btn{
-padding:14px 32px;
-font-size:15px;
-}
-
-section{
-padding:80px 5%;
-}
-
-.title h2{
-font-size:36px;
-}
-
-.cards{
-grid-template-columns:1fr;
-}
-
-.card img{
-height:220px;
-}
-
-}
-@media(max-width:900px){
-
-header{
 padding:20px 5%;
 }
 
@@ -289,8 +262,19 @@ gap:20px;
 }
 
 .logo{
-font-size:22px;
-text-align:center;
+justify-content:center;
+}
+
+.mar{
+font-size:24px;
+}
+
+.fuego{
+font-size:24px;
+}
+
+.y{
+font-size:16px;
 }
 
 nav ul{
@@ -311,16 +295,22 @@ font-size:17px;
 
 .hero{
 padding-top:230px;
+height:auto;
+min-height:100vh;
 }
 
 .hero-logo{
-width:80px;
+width:90px;
 margin-bottom:20px;
 }
 
 .hero h1{
-font-size:58px;
+font-size:52px;
 line-height:1.1;
+}
+
+.hero .y-title{
+font-size:35px;
 }
 
 .hero p{
@@ -338,11 +328,20 @@ section{
 padding:80px 5%;
 }
 
+.title h2{
+font-size:36px;
+}
+
 .cards{
 grid-template-columns:1fr;
 }
 
+.card img{
+height:220px;
 }
+
+}
+
 </style>
 
 </head>
@@ -354,7 +353,13 @@ grid-template-columns:1fr;
 <nav>
 
 <div class="logo">
-MAR <span>Y FUEGO</span>
+
+<span class="mar">MAR</span>
+
+<span class="y">Y</span>
+
+<span class="fuego">FUEGO</span>
+
 </div>
 
 <ul>
@@ -381,7 +386,13 @@ MAR <span>Y FUEGO</span>
 <img src="logo.png" class="hero-logo">
 
 <h1>
-MAR <span>Y FUEGO</span>
+
+<span class="mar-title">MAR</span>
+
+<span class="y-title">Y</span>
+
+<span class="fuego-title">FUEGO</span>
+
 </h1>
 
 <p>
