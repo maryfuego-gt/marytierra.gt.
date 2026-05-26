@@ -1,46 +1,291 @@
-<!-- ENTRADAS -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Menú | Mar y Fuego</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* GENERAL */
+
+body{
+    background:#111111;
+    color:white;
+    font-family:'Poppins',sans-serif;
+}
+
+/* HEADER */
+
+header{
+    width:100%;
+    padding:20px 8%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:rgba(0,0,0,0.8);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:32px;
+    color:#D4A017;
+    font-family:'Cinzel',serif;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#FF6B00;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#FF6B00;
+}
+
+/* SECCION */
+
+section{
+    padding:140px 8% 100px;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:80px;
+}
+
+.title h2{
+    font-size:60px;
+    color:#D4A017;
+    font-family:'Cinzel',serif;
+}
+
+.title p{
+    color:#bbb;
+    margin-top:15px;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* CATEGORIAS */
+
+.menu-category{
+    margin-bottom:100px;
+}
+
+.menu-category h2{
+    color:#D4A017;
+    font-size:42px;
+    margin-bottom:15px;
+    font-family:'Cinzel',serif;
+    text-align:center;
+}
+
+.menu-category p{
+    color:#aaa;
+    text-align:center;
+    margin-bottom:40px;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
+}
+
+.card{
+    background:#1b1b1b;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+    border:1px solid #222;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(255,107,0,0.25);
+}
+
+.card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card-content h3{
+    color:#FF6B00;
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.card-content p{
+    color:#ccc;
+    line-height:1.7;
+    margin-bottom:15px;
+}
+
+.price{
+    color:#D4A017;
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#0c0c0c;
+    color:#888;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav ul{
+    flex-direction:column;
+    text-align:center;
+    gap:15px;
+}
+
+.title h2{
+    font-size:42px;
+}
+
+.menu-category h2{
+    font-size:34px;
+}
+
+section{
+    padding:180px 5% 80px;
+}
+
+.cards{
+    grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">
+MAR <span>Y FUEGO</span>
+</div>
+
+<ul>
+
+<li><a href="index.html">Inicio</a></li>
+<li><a href="nosotros.html">Nosotros</a></li>
+<li><a href="menu.html">Menú</a></li>
+<li><a href="reservas.html">Reservas</a></li>
+<li><a href="delivery.html">Delivery</a></li>
+<li><a href="contacto.html">Contacto</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- MENU -->
+
+<section>
+
+<div class="title">
+
+<h2>Nuestro Menú</h2>
+
+<p>
+Comida preparada con dedicación, sabores auténticos y el equilibrio perfecto entre el mar y la parrilla.
+</p>
+
+</div>
+
+<!-- CORTES -->
+
+<div class="menu-category">
+
+<h2>Cortes y Parrilladas</h2>
+
+<p>
+Preparados al fuego con sabores intensos y acompañamientos especiales.
+</p>
+
+<div class="cards">
 
 <div class="card">
 
-<img src="https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop">
 
 <div class="card-content">
 
-<h3>Nachos Mar y Tierra</h3>
+<h3>Tomahawk</h3>
 
 <p>
-Crujientes nachos con carne asada, queso fundido, guacamole y pico de gallo.
+Corte cocinado al fuego acompañado de vegetales y papas.
 </p>
 
 <div class="price">
-Q75
+Q220
 </div>
 
 </div>
 
 </div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=1200&auto=format&fit=crop">
-
-<div class="card-content">
-
-<h3>Alitas BBQ</h3>
-
-<p>
-Alitas bañadas en salsa BBQ acompañadas de papas y aderezo ranch.
-</p>
-
-<div class="price">
-Q68
-</div>
-
-</div>
-
-</div>
-
-<!-- CORTES Y ASADOS -->
 
 <div class="card">
 
@@ -51,7 +296,7 @@ Q68
 <h3>Ribeye al Carbón</h3>
 
 <p>
-Jugoso ribeye preparado al carbón con vegetales y papas sazonadas.
+Jugoso ribeye preparado lentamente al carbón.
 </p>
 
 <div class="price">
@@ -71,7 +316,7 @@ Q210
 <h3>Costillas Ahumadas</h3>
 
 <p>
-Costillas cocinadas lentamente con salsa especial de la casa.
+Costillas bañadas en salsa especial de la casa.
 </p>
 
 <div class="price">
@@ -82,27 +327,41 @@ Q165
 
 </div>
 
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1558030006-450675393462?q=80&w=1200&auto=format&fit=crop">
-
-<div class="card-content">
-
-<h3>Parrillada Familiar</h3>
-
-<p>
-Mix de carnes, chorizo, pollo y acompañamientos para compartir.
-</p>
-
-<div class="price">
-Q320
-</div>
-
 </div>
 
 </div>
 
 <!-- CEVICHES -->
+
+<div class="menu-category">
+
+<h2>Ceviches</h2>
+
+<p>
+Mariscos frescos preparados con ingredientes naturales.
+</p>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>Ceviche Tropical</h3>
+
+<p>
+Camarones frescos con limón y sabores tropicales.
+</p>
+
+<div class="price">
+Q95
+</div>
+
+</div>
+
+</div>
 
 <div class="card">
 
@@ -113,31 +372,11 @@ Q320
 <h3>Ceviche Mixto</h3>
 
 <p>
-Camarón, pescado y pulpo preparados con limón fresco y especias.
+Pulpo, pescado y camarón preparados con especias frescas.
 </p>
 
 <div class="price">
 Q110
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1611250188496-e966043a0629?q=80&w=1200&auto=format&fit=crop">
-
-<div class="card-content">
-
-<h3>Ceviche de Camarón</h3>
-
-<p>
-Camarones frescos con tomate, cebolla morada y cilantro.
-</p>
-
-<div class="price">
-Q95
 </div>
 
 </div>
@@ -153,7 +392,7 @@ Q95
 <h3>Aguachile Verde</h3>
 
 <p>
-Camarones marinados con chile verde, pepino y limón.
+Camarones marinados con chile verde y pepino fresco.
 </p>
 
 <div class="price">
@@ -164,18 +403,32 @@ Q105
 
 </div>
 
-<!-- HAMBURGUESAS -->
+</div>
+
+</div>
+
+<!-- ESPECIALIDADES -->
+
+<div class="menu-category">
+
+<h2>Especialidades</h2>
+
+<p>
+Opciones favoritas para compartir y disfrutar.
+</p>
+
+<div class="cards">
 
 <div class="card">
 
-<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1200&auto=format&fit=crop">
 
 <div class="card-content">
 
 <h3>Hamburguesa Doble</h3>
 
 <p>
-Doble carne, queso cheddar, tocino y papas fritas.
+Doble carne, queso cheddar y papas fritas.
 </p>
 
 <div class="price">
@@ -186,30 +439,6 @@ Q95
 
 </div>
 
-<!-- PASTAS -->
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?q=80&w=1200&auto=format&fit=crop">
-
-<div class="card-content">
-
-<h3>Pasta Alfredo con Pollo</h3>
-
-<p>
-Pasta cremosa acompañada de pollo grillado y queso parmesano.
-</p>
-
-<div class="price">
-Q115
-</div>
-
-</div>
-
-</div>
-
-<!-- PIZZAS -->
-
 <div class="card">
 
 <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200&auto=format&fit=crop">
@@ -219,7 +448,7 @@ Q115
 <h3>Pizza BBQ</h3>
 
 <p>
-Pizza artesanal con pollo BBQ, cebolla caramelizada y queso mozzarella.
+Pizza artesanal con pollo BBQ y queso mozzarella.
 </p>
 
 <div class="price">
@@ -230,7 +459,41 @@ Q125
 
 </div>
 
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>Pasta Alfredo</h3>
+
+<p>
+Pasta cremosa con pollo grillado y parmesano.
+</p>
+
+<div class="price">
+Q115
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 <!-- POSTRES -->
+
+<div class="menu-category">
+
+<h2>Postres</h2>
+
+<p>
+El complemento perfecto después de una buena comida.
+</p>
+
+<div class="cards">
 
 <div class="card">
 
@@ -238,10 +501,10 @@ Q125
 
 <div class="card-content">
 
-<h3>Cheesecake de Fresa</h3>
+<h3>Cheesecake</h3>
 
 <p>
-Cheesecake cremoso acompañado de salsa natural de fresa.
+Cheesecake cremoso acompañado de salsa de fresa.
 </p>
 
 <div class="price">
@@ -261,7 +524,7 @@ Q45
 <h3>Brownie con Helado</h3>
 
 <p>
-Brownie caliente acompañado de helado de vainilla y chocolate.
+Brownie caliente acompañado de helado de vainilla.
 </p>
 
 <div class="price">
@@ -292,22 +555,36 @@ Q35
 
 </div>
 
+</div>
+
+</div>
+
 <!-- BEBIDAS -->
+
+<div class="menu-category">
+
+<h2>Bebidas</h2>
+
+<p>
+Opciones refrescantes para acompañar tu comida.
+</p>
+
+<div class="cards">
 
 <div class="card">
 
-<img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e?q=80&w=1200&auto=format&fit=crop">
 
 <div class="card-content">
 
-<h3>Limonada Natural</h3>
+<h3>Coca-Cola</h3>
 
 <p>
-Limonada fresca preparada al momento.
+Bebida gaseosa fría.
 </p>
 
 <div class="price">
-Q22
+Q18
 </div>
 
 </div>
@@ -323,7 +600,7 @@ Q22
 <h3>Naranjada</h3>
 
 <p>
-Refrescante bebida natural de naranja con hielo.
+Bebida natural preparada con naranja fresca.
 </p>
 
 <div class="price">
@@ -336,58 +613,22 @@ Q24
 
 <div class="card">
 
-<img src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=1200&auto=format&fit=crop">
 
 <div class="card-content">
 
-<h3>Coca-Cola</h3>
+<h3>Limonada</h3>
 
 <p>
-Bebida gaseosa fría disponible en diferentes presentaciones.
+Limonada natural preparada al momento.
 </p>
 
 <div class="price">
-Q18
+Q22
 </div>
 
 </div>
 
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=1200&auto=format&fit=crop">
-
-<div class="card-content">
-
-<h3>Milkshake de Chocolate</h3>
-
-<p>
-Batido cremoso de chocolate con crema y toppings.
-</p>
-
-<div class="price">
-Q38
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=1200&auto=format&fit=crop">
-
-<div class="card-content">
-
-<h3>Café Artesanal</h3>
-
-<p>
-Café caliente preparado con granos seleccionados.
-</p>
-
-<div class="price">
-Q20
 </div>
 
 </div>
@@ -395,6 +636,16 @@ Q20
 </div>
 
 <!-- COMBOS -->
+
+<div class="menu-category">
+
+<h2>Combos</h2>
+
+<p>
+Opciones ideales para compartir.
+</p>
+
+<div class="cards">
 
 <div class="card">
 
@@ -405,7 +656,7 @@ Q20
 <h3>Combo Familiar</h3>
 
 <p>
-Parrillada + pizza + bebidas para compartir entre amigos y familia.
+Parrillada, pizza y bebidas para compartir.
 </p>
 
 <div class="price">
@@ -425,7 +676,7 @@ Q390
 <h3>Combo Burger</h3>
 
 <p>
-Hamburguesa doble, papas fritas y bebida.
+Hamburguesa doble, papas fritas y Coca-Cola.
 </p>
 
 <div class="price">
@@ -435,3 +686,19 @@ Q110
 </div>
 
 </div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Mar y Fuego Restaurante - Todos los derechos reservados
+
+</footer>
+
+</body>
+
+</html>
