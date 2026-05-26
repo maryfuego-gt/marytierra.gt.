@@ -17,272 +17,305 @@
 /* RESET */
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 /* GENERAL */
 
 body{
-    background:#111111;
-    color:#F5F5F5;
-    font-family:'Poppins',sans-serif;
+background:#111111;
+color:#F5F5F5;
+font-family:'Poppins',sans-serif;
+overflow-x:hidden;
 }
 
 /* HEADER */
 
 header{
-    width:100%;
-    padding:20px 8%;
-    position:fixed;
-    top:0;
-    left:0;
-    z-index:1000;
-    background:rgba(0,0,0,0.75);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid rgba(255,255,255,0.05);
+width:100%;
+padding:20px 8%;
+position:fixed;
+top:0;
+left:0;
+z-index:1000;
+background:rgba(0,0,0,0.75);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
 /* NAV */
 
 nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 .logo{
-    font-size:32px;
-    font-family:'Cinzel',serif;
-    color:#D4A017;
-    font-weight:bold;
+font-size:32px;
+font-family:'Cinzel',serif;
+color:#D4A017;
+font-weight:bold;
 }
 
 .logo span{
-    color:#FF6B00;
+color:#FF6B00;
 }
 
 nav ul{
-    display:flex;
-    list-style:none;
-    gap:30px;
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav ul li{
+text-align:center;
 }
 
 nav ul li a{
-    text-decoration:none;
-    color:white;
-    transition:0.3s;
-    font-weight:500;
+text-decoration:none;
+color:white;
+transition:0.3s;
+font-weight:500;
+font-size:17px;
 }
 
 nav ul li a:hover{
-    color:#FF6B00;
+color:#FF6B00;
 }
 
 /* SECCION */
 
 section{
-    padding:140px 8% 100px;
+padding:150px 8% 100px;
 }
 
+/* TITLE */
+
 .title{
-    text-align:center;
-    margin-bottom:60px;
+text-align:center;
+margin-bottom:70px;
 }
 
 .title h2{
-    font-size:55px;
-    color:#D4A017;
-    font-family:'Cinzel',serif;
+font-size:55px;
+color:#D4A017;
+font-family:'Cinzel',serif;
+margin-bottom:15px;
 }
 
 .title p{
-    color:#bbb;
-    margin-top:15px;
-    font-size:18px;
-    line-height:1.8;
+color:#bbb;
+margin-top:15px;
+font-size:18px;
+line-height:1.8;
+max-width:900px;
+margin:auto;
 }
 
 /* FORMULARIO */
 
 .contact{
-    background:#1b1b1b;
-    border-radius:25px;
-    padding:50px;
-    border:1px solid #222;
+background:#1b1b1b;
+border-radius:25px;
+padding:50px;
+border:1px solid #222;
 }
 
 .contact h3{
-    font-size:38px;
-    color:#FF6B00;
-    margin-bottom:15px;
-    text-align:center;
+font-size:38px;
+color:#FF6B00;
+margin-bottom:15px;
+text-align:center;
 }
 
 .contact p{
-    color:#ccc;
-    text-align:center;
-    margin-bottom:35px;
-    line-height:1.7;
+color:#ccc;
+text-align:center;
+margin-bottom:35px;
+line-height:1.8;
 }
 
+/* FORM */
+
 .reservation-form{
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-    max-width:800px;
-    margin:auto;
+display:flex;
+flex-direction:column;
+gap:20px;
+max-width:800px;
+margin:auto;
 }
 
 .reservation-form input,
 .reservation-form select,
 .reservation-form textarea{
 
-    width:100%;
-    padding:18px;
-    border:none;
-    border-radius:15px;
-    background:#222;
-    color:white;
-    font-size:16px;
-    outline:none;
-    border:1px solid #333;
-    transition:0.3s;
+width:100%;
+padding:18px;
+border:none;
+border-radius:15px;
+background:#222;
+color:white;
+font-size:16px;
+outline:none;
+border:1px solid #333;
+transition:0.3s;
 }
 
 .reservation-form input:focus,
 .reservation-form select:focus,
 .reservation-form textarea:focus{
 
-    border:1px solid #FF6B00;
-    box-shadow:0 0 15px rgba(255,107,0,0.3);
+border:1px solid #FF6B00;
+box-shadow:0 0 15px rgba(255,107,0,0.3);
 }
 
 .reservation-form textarea{
-    resize:none;
-    height:150px;
+resize:none;
+height:150px;
 }
 
 label{
-    color:#D4A017;
-    font-weight:600;
-    margin-bottom:-10px;
+color:#D4A017;
+font-weight:600;
+margin-bottom:-10px;
 }
 
 /* BOTON */
 
 .btn{
-    display:inline-block;
-    padding:16px 40px;
-    background:#FF6B00;
-    color:white;
-    text-decoration:none;
-    border-radius:50px;
-    font-weight:bold;
-    border:none;
-    cursor:pointer;
-    transition:0.3s;
-    margin-top:10px;
+display:inline-block;
+padding:16px 40px;
+background:#FF6B00;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:bold;
+border:none;
+cursor:pointer;
+transition:0.3s;
+margin-top:10px;
+font-size:16px;
 }
 
 .btn:hover{
-    background:#D4A017;
-    transform:scale(1.03);
+background:#D4A017;
+transform:scale(1.03);
 }
 
 /* CARDS */
 
 .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:35px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:35px;
 }
 
 .card{
-    background:#1b1b1b;
-    border-radius:20px;
-    overflow:hidden;
-    transition:0.4s;
-    border:1px solid #222;
+background:#1b1b1b;
+border-radius:20px;
+overflow:hidden;
+transition:0.4s;
+border:1px solid #222;
 }
 
 .card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 25px rgba(255,107,0,0.25);
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(255,107,0,0.20);
 }
 
 .card img{
-    width:100%;
-    height:240px;
-    object-fit:cover;
+width:100%;
+height:240px;
+object-fit:cover;
 }
 
 .card-content{
-    padding:25px;
+padding:25px;
 }
 
 .card-content h3{
-    color:#FF6B00;
-    font-size:28px;
-    margin-bottom:12px;
+color:#FF6B00;
+font-size:28px;
+margin-bottom:12px;
 }
 
 .card-content p{
-    color:#ccc;
-    line-height:1.8;
+color:#ccc;
+line-height:1.8;
 }
 
 /* FOOTER */
 
 footer{
-    text-align:center;
-    padding:30px;
-    background:#0c0c0c;
-    color:#888;
+text-align:center;
+padding:30px;
+background:#0c0c0c;
+color:#888;
 }
 
 /* RESPONSIVE */
 
-@media(max-width:768px){
+@media(max-width:900px){
 
 header{
-    padding:15px 5%;
+padding:20px 5%;
 }
 
 nav{
-    flex-direction:column;
-    gap:15px;
-}
-
-nav ul{
-    flex-direction:column;
-    text-align:center;
-    gap:15px;
+flex-direction:column;
+gap:18px;
 }
 
 .logo{
-    font-size:28px;
+font-size:24px;
+text-align:center;
+}
+
+nav ul{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+width:100%;
+padding:0;
+list-style:none;
+}
+
+nav ul li{
+text-align:center;
+}
+
+nav ul li a{
+font-size:18px;
+color:white;
+text-decoration:none;
 }
 
 section{
-    padding:180px 5% 80px;
+padding:220px 5% 80px;
 }
 
 .title h2{
-    font-size:40px;
+font-size:42px;
+}
+
+.title p{
+font-size:17px;
+line-height:1.8;
 }
 
 .contact{
-    padding:30px;
+padding:30px;
 }
 
 .cards{
-    grid-template-columns:1fr;
+grid-template-columns:1fr;
 }
 
 .card img{
-    height:220px;
+height:220px;
 }
 
 }
@@ -304,15 +337,10 @@ MAR <span>Y FUEGO</span>
 <ul>
 
 <li><a href="index.html">Inicio</a></li>
-
 <li><a href="nosotros.html">Nosotros</a></li>
-
 <li><a href="menu.html">Menú</a></li>
-
 <li><a href="reservas.html">Reservas</a></li>
-
 <li><a href="delivery.html">Delivery</a></li>
-
 <li><a href="contacto.html">Contacto</a></li>
 
 </ul>
