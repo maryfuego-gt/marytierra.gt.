@@ -189,6 +189,42 @@ section{
 }
 
 /* CONTACTO */
+    .reservation-form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    max-width:700px;
+    margin:auto;
+    margin-top:40px;
+}
+
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea{
+
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:15px;
+    background:#222;
+    color:white;
+    font-size:16px;
+    outline:none;
+    border:1px solid #333;
+    transition:0.3s;
+}
+
+.reservation-form input:focus,
+.reservation-form select:focus,
+.reservation-form textarea:focus{
+    border:1px solid #FF6B00;
+    box-shadow:0 0 15px rgba(255,107,0,0.3);
+}
+
+.reservation-form textarea{
+    resize:none;
+    height:140px;
+}
 
 .contact{
     background:#181818;
@@ -245,11 +281,11 @@ MAR <span>Y FUEGO</span>
 </div>
 
 <ul>
-<li><a href="#">Inicio</a></li>
-<li><a href="#">Nosotros</a></li>
-<li><a href="#">Menú</a></li>
-<li><a href="#">Reservas</a></li>
-<li><a href="#">Contacto</a></li>
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#nosotros">Nosotros</a></li>
+<li><a href="#menu">Menú</a></li>
+<li><a href="#reservas">Reservas</a></li>
+<li><a href="#contacto">Contacto</a></li>
 </ul>
 
 </nav>
@@ -258,7 +294,7 @@ MAR <span>Y FUEGO</span>
 
 <!-- HERO -->
 
-<section class="hero">
+<section class="hero" id="inicio">
 
 <div class="hero-content">
 
@@ -271,6 +307,52 @@ Parrilladas premium, ceviches frescos y una experiencia elegante inspirada en el
 <a href="#" class="btn">
 Ver Menú
 </a>
+
+</div>
+
+<section id="menu">
+    <!-- NOSOTROS -->
+
+<section id="nosotros">
+
+<div class="title">
+<h2>Sobre Nosotros</h2>
+<p>Elegancia, pasión y sabor premium</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>Nuestra Historia</h3>
+
+<p>
+En Mar y Fuego combinamos mariscos frescos y cortes premium para crear una experiencia gastronómica elegante e inolvidable.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>Ambiente Luxury</h3>
+
+<p>
+Diseño moderno, luces cálidas y un ambiente sofisticado pensado para disfrutar cada momento.
+</p>
+
+</div>
+
+</div>
 
 </div>
 
@@ -345,17 +427,43 @@ Un restaurante elegante con luces cálidas y ambiente moderno estilo premium.
 <h3>Reserva Tu Mesa</h3>
 
 <p>
-Disfruta una experiencia única en Mar y Fuego.
+Vive una experiencia premium en Mar y Fuego.
 </p>
 
-<a href="#" class="btn">
+<form class="reservation-form">
+
+<input type="text" placeholder="Nombre Completo" required>
+
+<input type="email" placeholder="Correo Electrónico" required>
+
+<input type="tel" placeholder="Número de Teléfono" required>
+
+<input type="date" required>
+
+<input type="time" required>
+
+<select required>
+<option value="">Cantidad de Personas</option>
+<option>1 Persona</option>
+<option>2 Personas</option>
+<option>3 Personas</option>
+<option>4 Personas</option>
+<option>5 Personas</option>
+<option>6+ Personas</option>
+</select>
+
+<textarea placeholder="Comentarios especiales"></textarea>
+
+<button type="submit" class="btn">
 Reservar Ahora
-</a>
+</button>
+
+</form>
 
 </div>
-
-</section>
-
+    
+<section id="reservas">
+    
 <footer>
 
 © 2026 Mar y Fuego Restaurante - Todos los derechos reservados
